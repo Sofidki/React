@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Main from './pages/Main';
 import Detail from './pages/Detail';
 import NotFound from './pages/NotFound';
+import Result from './pages/Result/Result';
 
 
 
@@ -13,12 +14,10 @@ function App() {
     <Router>
     <Header/>
       <Switch>
-      <Route path='/products'>
-        <Main />
-      </Route>
-      <Route path='/detalle'>
-        <Detail />
-      </Route>
+      <Route exact path='/'> <Main /> </Route>
+      <Route path='/products'> <Main /> </Route>
+      <Route path='/detalle/:id'> <Detail /> </Route>
+      <Route path='/result/buscar'> <Result /> </Route>
       <Route component={NotFound}/>
     </Switch>
     

@@ -8,7 +8,7 @@ const SearchForm = () => {
 
     const handleSubmit =(event) => {
         let word = keyword.current.value;
-        event.preventDeFault()
+        event.preventDefault()
         if (word.lenght < 2) {
             swal({
                 text: 'El minimo de caracteres es 3',
@@ -16,7 +16,7 @@ const SearchForm = () => {
             });
         }else {
             keyword.current.value = '';
-            history.push(`/results?word=${word}`);
+            history.push(`/results/buscar?name=${word}`);
         }
     }
 

@@ -5,16 +5,24 @@ const Detail = () => {
     const [product, setProduct] = useState({});
     const {id} = useParams();
 
-    const getProduct = () => {
-        fetch(`http://localhost:3001/products/${id}`)
-            .then(res => res.json())
-            .then(product => {
-                setProduct(product);
-            })
-            .catch(error => console.log(error))
+    const getProduct = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:3001/products/detalle/${id}`)
+            
+            if (!response.ok) {
+                throw new Error(`Error al obtener el producto (código de estado: ${response.status})`)
+            }
+    
+            const product = await response.json()
+            console.log(product)
+            setProduct(product)
+        } catch (error) {
+            console.error("Error al obtener el producto:", error.message)
+        }
     }
-
-    useEffect(getProduct, [id]);
+    useEffect(() =>{
+        getProduct(id)
+        },[id]) 
 
     return ( 
             <div class="container flex">

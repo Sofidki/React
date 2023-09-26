@@ -5,16 +5,23 @@ const Main = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
-    const getProducts = () => {
-        fetch(`http://localhost:3001/products`)
-            .then(res => res.json())
-            .then(products => {
-                setProducts(products);
-                console.log(products);
-            })
-    }
-    useEffect(getProducts, [])
+    useEffect(() => {
+        fetchProducts();
+    }, []);
 
+    const fetchProducts = async () => {
+        try {
+            const response = await fetch("http://localhost:3001/products");
+            if (!response.ok) {
+                throw new Error("Error fetching products");
+            }
+            const productsData = await response.json();
+            setProducts(productsData);
+            console.log(productsData);
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    };
     return (
         <>
         <ProductList 

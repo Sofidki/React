@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import{ useLocation } from "react-router-dom";
+import{ useLocation, useParams } from "react-router-dom";
 import ProductList from "../../components/Productlist"
 
 
@@ -7,14 +7,12 @@ import ProductList from "../../components/Productlist"
 const Result = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation();
-    console.log(location);
-    //const query = new URLSearchParams(location.search);
-    //const word = query.get ('word');
+    const {name} = useParams();
 
     const getProducts = () => {
-        fetch(`localhost:3001/products/buscar?name=${word}`)
+        fetch(`localhost:3001/products/buscar?name=${name}`)
             .then(res => res.json())
-            .then (data => console.log(data))
+            .then (data => console.log(data, "result"))
             .catch((error) => console.log(error));
     }
 
@@ -26,7 +24,7 @@ const Result = () => {
         {
             products.length > 0 ?
             <ProductList
-            title={`Resultados de la busqueda de: ${word}`}
+            title={`Resultados de la busqueda de: ${name}`}
             products={products}
         />
         :
