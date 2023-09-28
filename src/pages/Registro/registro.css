@@ -1,31 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: monospace;
-}
-
-.header {
-    display: flex;
-    height: 100px;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgb(177, 252, 102);
-    text-decoration: none;
-}
-
-.logo {
-    display: flex;
-    width: 120px;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: rgb(177, 252, 102);
-}
+.cajagrande
 
 .wrapper {
     position: relative;

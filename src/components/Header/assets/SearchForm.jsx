@@ -16,7 +16,7 @@ const SearchForm = () => {
             });
         }else {
             keyword.current.value = '';
-            history.push(`/results/buscar?name=${word}`);
+            history.push(`/result/buscar?name=${word}`);
         }
     }
 

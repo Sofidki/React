@@ -7,17 +7,18 @@ import ProductList from "../../components/Productlist"
 const Result = () => {
     const [products, setProducts] = useState([]);
     const location = useLocation();
-    const {name} = useParams();
+    const query = new URLSearchParams(location.search);
+    const name = query.get("name");
 
     const getProducts = () => {
-        fetch(`localhost:3001/products/buscar?name=${name}`)
+        fetch(`http://localhost:3001/products/buscar?name=${name}`)
             .then(res => res.json())
-            .then (data => console.log(data, "result"))
+            .then (data => setProducts(data))
             .catch((error) => console.log(error));
     }
 
-    useEffect(getProducts, []);
-
+    useEffect(getProducts, [name]);
+    
     return (  
         <>
         

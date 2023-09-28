@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import '../Detail/detalle.css';
 
 const Detail = () => {
     const [product, setProduct] = useState({});
@@ -14,7 +15,6 @@ const Detail = () => {
             }
     
             const product = await response.json()
-            console.log(product)
             setProduct(product)
         } catch (error) {
             console.error("Error al obtener el producto:", error.message)

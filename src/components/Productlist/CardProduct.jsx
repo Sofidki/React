@@ -1,17 +1,10 @@
 /*import {Link} from 'react-reoter-dom'; */
 
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 
-const Cardproducts = ({product, cart, setCart}) => {
-    const button = useRef();
-    
-    const addToCart = () => {
-        const cartNew = [...cart, button.current.id]
-        setCart(cartNew);
-    };
-    
+const Cardproducts = ({product}) => {
+
     
     return (
             <Link to={`/detalle/${product._id}`}>
@@ -21,7 +14,6 @@ const Cardproducts = ({product, cart, setCart}) => {
                 <h3 className="producto-tituo">{product.name}</h3>
                 <p className="producto-precio">${product.price}</p>
             </div>
-                <button className="producto-agregar" id={product._id} onClick={addToCart} ref={button}>Agregar</button>
         </div>
         </Link>
     );
