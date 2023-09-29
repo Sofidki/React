@@ -1,0 +1,35 @@
+.header-movile{
+    display: flex;
+    height: 4rem;
+    align-items: center;
+}
+.logo{
+
+    width: 80px;
+    height: 80px;
+}
+
+.menu-header{
+    width: 70%;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+}
+.menu-header li{
+    display: flex;
+}
+.links{
+    color:#acacac;
+    padding-right: 2rem;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .5s;
+    background-color: transparent;
+
+}
+.links:hover{
+    transform: scale(1.02);
+    color:#8c8c8c;
+
+}

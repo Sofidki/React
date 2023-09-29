@@ -1,4 +1,4 @@
-import '../Main/estilo.css'
+import './estilo.css'
 
 
 const Main = () => {
@@ -6,8 +6,8 @@ const Main = () => {
         <div>
         <section className="encabezado">
             <h1 className="titulo">Kriptonita Growshop</h1>
-            <p><mark>¡Bienvenidos al mundo del cultivo!</mark> 
-            <br /> Si eres nuevo en el mundo del cultivo, ¡estás en el lugar correcto! En nuestro growshop, encontrarás todo lo que necesitas para comenzar a cultivar tus propias plantas en casa. Desde semillas hasta equipos de iluminación, tenemos todo lo que necesitas para comenzar tu propio jardín interior o exterior. </p>
+            <p className='subtitle-encabezado'>¡Bienvenidos al mundo del cultivo! </p>
+            <p className='copete-encabezado'> Si eres nuevo en el mundo del cultivo, ¡estás en el lugar correcto! En nuestro growshop, encontrarás todo lo que necesitas para comenzar a cultivar tus propias plantas en casa. Desde semillas hasta equipos de iluminación, tenemos todo lo que necesitas para comenzar tu propio jardín interior o exterior. </p>
         </section>
         <div className="banner">
             <h3>Cultiva. La tierra es tu madre; el campo es tu sustento; sazonados frutos y óptimas cosechas recogeremos si los cultivamos . No dejes ninguna tierra estéril. Da a la tierra el cuidado que necesita para que te alimente y te haga vivir
