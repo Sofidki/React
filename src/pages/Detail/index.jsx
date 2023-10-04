@@ -25,21 +25,21 @@ const Detail = () => {
         },[id]) 
 
     return ( 
-            <div class="container">
-                <div className="left">
-                    <div className="main_image">
-                        <img src={`http://localhost:3001/images/${product.image}`} className="slide" alt="product" />
+            <div class="containerdetalle flexdetalle">
+                <div className="leftdetalle">
+                    <div className="main_imagedetalle">
+                        <img src={`http://localhost:3001/images/${product.image}`} className="slidedetalle" alt="product" />
                     </div>
                 </div>
-                <div className="right">
+                <div className="rightdetalle">
                         <h3>{product.name}</h3>
-                        <h4> <small>$</small>{product.price} </h4>
-                        <p className="descripcion">{product.description}</p>
+                        <h4 className="detalle"> <small>$</small>{product.price} </h4>
+                        <p className="descripciondetalle">{product.description}</p>
                         <h5>En color: {product.colors}</h5>
                         </div>
-                <div className="numer">
+                <div className="numerdetalle">
                     <h5>Number</h5>
-                        <div className="addflex1">
+                        <div className="addflex1detalle">
                             <span>-</span>
                             <label>1</label>
                             <span>+</span>

@@ -1,51 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
 
-.container {
-    height: 800px;
-    margin-top: 20px ;
-    flex-direction: column;
+.containerdetalle {
+    box-sizing: border-box;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 400px;
+    height: 130vh;
+    margin-top: 5%;
+    background: white;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
 }
 
-.main_image{
-    width: 20px;
-    margin-left: 100px;
-
+.leftdetalle, .rightdetalle {
+    width: 50%;
+    padding: 30px;
 }
 
-.right {
-    display: block;
-    border-right: 10px;
-    
+
+
+.flex1 {
+    display: flex;
 }
 
-.descripcion{
-    padding: 0 30px 0 30px;
+.numerdetalle {
+    padding: 10px 10px 50px 50px;
+    margin-left: 500px;
 }
 
-h4 {
-    text-align: center;
+.numerdetalle h5 {
+    padding-left: 100px;
 }
-.numer{
+
+.main_imagedetalle {
+    width: 10px;
+    height: 10px;
+}
+
+.slidedetalle {
+    width: 500px;
+    height:450px;
+}
+
+.option img {
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+}
+
+.rightdetalle {
+    padding: 10px 100px 30px 50px;
+    margin-left: 500px;
+}
+
+.rightdetalle h3 {
+    color: #af827d;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+}
+
+.numerdetalle h5,
+.rightdetalle p,
+.rightdetalle small {
+    color: #837D7C;
+}
+
+.rightdetalle h4 {
+    color: black;
+}
+
+.rightdetalle p {
+    margin: 20px 0 50px 0;
+    line-height: 25px;
+}
+
+.numerdetalle h5 {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.addflex1detalle label,
+.addflex1detalle span,
+.color span {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    margin: 20px 10px 20px 0;
+}
+
+
+.addflex1detalle label,
+.addflex1detalle span {
     background: none;
-        
-        color: #C1908B;
-        text-align: left;
-        line-height: 25px;
+    border: 1px solid #C1908B;
+    color: #C1908B;
+    text-align: center;
+    line-height: 25px;
+    padding: 5px;
 }
 
-.numer label {
-    padding: 10px 30px 0 20px;
+.addflex1detalle label {
+    padding: 20px 30px 0 30px;
     border-radius: 50px;
     line-height: 0;
 }
 
-.addflex1 {
-    width: 100px;
-        padding: 10px;
-        border: none;
-        outline: none;
-        background: #C1908B;
-        color: white;
-        border-radius: 30px;
-        text-align: right;
+.addflex1detalle span {
+    width: 80px;
+    height: 80px;
+    padding: 5px 10px 5px 10px;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .containerdetalle {
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    }
+
+    .leftdetalle, .rightdetalle {
+    width: 100%;
+    }
+
+    .containerdetalle {
+    flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:511px) {
+    .containerdetalle {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    }
+
+    .leftdetalle, .rightdetalle {
+    padding: 0;
+    }
+
+    .main_imagedetalle img {
+    width: 100%;
+    height: 100%;
+    }
+
+    .option {
+    display: flex;
+    flex-wrap: wrap;
+    }
 }
