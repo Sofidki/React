@@ -1,5 +1,5 @@
 import '../Header.css';
-import logo from '../../../assests/img/logo.jpg'
+import logo from '../../../assests/img/logo_sinfondo.png'
 import { Link } from 'react-router-dom';
 import SearchForm from './SearchForm';
 

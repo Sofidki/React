@@ -11,7 +11,7 @@
     justify-content: center;
     padding: 5px;
     background-color: rgb(177, 252, 102);
-
+    margin-top: 10px;
 }
 
 .info  {
@@ -20,4 +20,9 @@
     background-color: transparent;
     margin-right: 200px;
 
+}
+
+.logofooter {
+    width: 15rem;
+    height: 10rem;
 }
